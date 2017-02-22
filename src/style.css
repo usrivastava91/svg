@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.buttons{
+    margin: 50px;
+}
+
+.btn{
+    margin: 10px;
+}
+.blue-eyes .eye-color{
+    fill: #175282
+}
+
+.sad .mouth {
+    transform: rotate(180deg) scale(.5);
+    transform-origin: 340px 390px;
+}
+
+@keyframes moveEyes {
+    20% {
+        transform: translate(-18px, -20px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+    65% {
+        transform: translate(18px, -20px);
+    }
+}
+
+.move-around .inner-eye-group {
+    animation: moveEyes 12s infinite;
+}
+
+@keyframes leftWhiskers{
+    20% {
+        transform: rotate(5deg);
+    }
+    60%{
+        transform:rotate(-5deg);
+    }
+
+}
+.move-around .left-whiskers {
+    animation: leftWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes rightWhiskers{
+    5% {
+        transform: rotate(-2deg);
+    }
+    90%{
+        transform:rotate(7deg);
+    }
+
+}
+
+.move-around .right-whiskers {
+    animation: rightWhiskers 3s infinite;
+    transform-origin: 325px 350px;
+}
+
+@keyframes move {
+    20%{
+        tranform: rotateY(10deg) rotateX(10deg) ;
+    }
+    40%{
+        tranform: rotateY(25deg) rotateX(10deg) ;
+    }
+    60%{
+        tranform: rotateY(-10deg) rotateX(-10deg) ;
+    }
+    85%{
+        transform: rotateY(-10deg) rotateX(-16deg);
+    }
+}
+.move-around {
+    animation: move 8s infinite;
+}
+
+.svg-container {
+    perspective: 3000px;
+}
